@@ -13,7 +13,7 @@ Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data
 
 ## Compare the parameters
 "numIterations".  
-Set the step_size=10 and reg_param=1, draw the graph for the numIterations. The AUC is the highest when num_iteration is 1. But the AUCs are similar, only little difference.
+Set the step_size=10 and reg_param=1, draw the graph for the numIterations. The AUC is the highest when num_iteration is 25. But the AUCs are similar, only little difference.
 ~~~
     num_iterations_list = [1, 3, 5, 15, 25]
     step_size_list = [100]
@@ -24,23 +24,25 @@ Set the step_size=10 and reg_param=1, draw the graph for the numIterations. The 
 
 
 "stepSize"
-Set the mum_iteration=15 and mini_batch_fraction=0.8, draw the graph for the stepSize. The AUC is the hightest when step_size is 10.
+Set the mum_iteration=25 and mini_batch_fraction=1, draw the graph for the stepSize. The AUC is the hightest when step_size is 100. But the AUCs are similar, only little difference.
 ~~~
-    num_iterations_list = [15]
+    num_iterations_list = [25]
     step_size_list = [10, 50, 100, 200]
-    mini_batch_fraction_list = [0.8]
+    reg_param_list = [1]
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/194132258-339e74ad-a243-4652-836a-8d49783c321d.png)
+![image](https://user-images.githubusercontent.com/75282285/194394762-d2794c60-4b99-4449-8aa0-84af203e1118.png)
 
 
-"miniBatchFraction".
-Set the num_iteration=15 and step_size=10, draw the graph for the miniBatchFraction. The AUC is the hightest when mini_batch_fraction is 0.8.
+
+"regParam".
+Set the num_iteration=25 and step_size=100, draw the graph for the miniBatchFraction. The AUC is the hightest when regParam is 1.
 ~~~
-    num_iterations_list = [15]
-    step_size_list = [10]
-    mini_batch_fraction_list = [0.5, 0.8, 1]
+    num_iterations_list = [25]
+    step_size_list = [100]
+    reg_param_list = [0.01, 0.1, 1]
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/194132553-c1165925-9e03-4428-aac9-3549852a9262.png)
+![image](https://user-images.githubusercontent.com/75282285/194395435-8e85c0a7-61bd-44ad-ba83-2732f2f67018.png)
+
 
 
 
