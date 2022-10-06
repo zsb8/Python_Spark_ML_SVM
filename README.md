@@ -1,8 +1,10 @@
+Data is pubic.    
+
 # Python_Spark_ML_SVM
 Use SVM algorithm to machine learning, find the best mode to predict the validation of website.
 
 Running environment is Spark + Hadoop + PySpark    
-Used the algorithm is Stochastic Gradient Descent (SGD).     
+Used the algorithm is Support Vetcor Machine (SVM).     
 Used the library is pyspark.mllib. 
 
 # Stage1:  Read data
@@ -11,13 +13,14 @@ Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data
 
 ## Compare the parameters
 "numIterations".  
-Set the step_size=10 and mini_batch_fraction=1, draw the graph for the numIterations. The AUC is the highest when num_iteration is 50. 
+Set the step_size=10 and reg_param=1, draw the graph for the numIterations. The AUC is the highest when num_iteration is 1. But the AUCs are similar, only little difference.
 ~~~
-    num_iterations_list = [5, 15, 20, 50, 100]
-    step_size_list = [10]
-    mini_batch_fraction_list = [1]
+    num_iterations_list = [1, 3, 5, 15, 25]
+    step_size_list = [100]
+    reg_param_list = [1]
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/194131970-37be45bf-dcc8-4ac6-a52e-e2e411346601.png)
+![image](https://user-images.githubusercontent.com/75282285/194394064-a366c96c-a1e4-481e-b00a-c67dfedf1357.png)
+
 
 
 "stepSize"
