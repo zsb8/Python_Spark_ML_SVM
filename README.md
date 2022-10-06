@@ -56,8 +56,9 @@ Found the best parameters includ the best AUC and the best model.
 
 # Stage3: Test
 Used the sub_test data set and the best model to calculate the AUC. If testing AUC is similare as the best AUC, it is OK.
-As the result, the best AUC is  0.6610, use the test data set to calcuate AUC is 0.6565, the difference is 0.0045, so it has not overfitting issue. 
-![image](https://user-images.githubusercontent.com/75282285/194131330-67a56a36-75d5-4501-b8f7-6bdcefb960ba.png)
+As the result, the best AUC is  0.6605, use the test data set to calcuate AUC is 0.6630, the difference is 0.0025, so it has not overfitting issue. 
+![image](https://user-images.githubusercontent.com/75282285/194395839-faba8d2d-fe4e-4f33-bc97-1afd1d4374b8.png)
+
 
 
 # Stage4: Predict
