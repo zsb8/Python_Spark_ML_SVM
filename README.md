@@ -51,7 +51,8 @@ Created the model using train data set.
 Calculated the AUC using validation data set.
 Sorted the metrics.    
 Found the best parameters includ the best AUC and the best model.   
-![image](https://user-images.githubusercontent.com/75282285/194131381-d1165b01-d03c-4b8d-ba75-81ef9eb4601d.png)
+![image](https://user-images.githubusercontent.com/75282285/194396120-13d6c770-5c42-415f-b3a6-f913cd98c406.png)
+
 
 
 # Stage3: Test
