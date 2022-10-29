@@ -14,7 +14,7 @@ Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data
 ## Compare the parameters
 "numIterations".  
 Set the step_size=10 and reg_param=1, draw the graph for the numIterations. The AUC is the highest when num_iteration is 25. But the AUCs are similar, only little difference.
-~~~
+~~~python
     num_iterations_list = [1, 3, 5, 15, 25]
     step_size_list = [100]
     reg_param_list = [1]
@@ -25,7 +25,7 @@ Set the step_size=10 and reg_param=1, draw the graph for the numIterations. The 
 
 "stepSize"
 Set the mum_iteration=25 and mini_batch_fraction=1, draw the graph for the stepSize. The AUC is the hightest when step_size is 100. But the AUCs are similar, only little difference.
-~~~
+~~~python
     num_iterations_list = [25]
     step_size_list = [10, 50, 100, 200]
     reg_param_list = [1]
@@ -36,7 +36,7 @@ Set the mum_iteration=25 and mini_batch_fraction=1, draw the graph for the stepS
 
 "regParam".
 Set the num_iteration=25 and step_size=100, draw the graph for the miniBatchFraction. The AUC is the hightest when regParam is 1.
-~~~
+~~~python
     num_iterations_list = [25]
     step_size_list = [100]
     reg_param_list = [0.01, 0.1, 1]
@@ -64,7 +64,7 @@ As the result, the best AUC is  0.6605, use the test data set to calcuate AUC is
 
 # Stage4: Predict
 Use the test data (in Hadoop, test.tsv) and the model (calculated after Stage2) to predict.
-~~~
+~~~python
 def predict_data(best_model):
     raw_data_with_header = sc.textFile(path + "test.tsv")
     header = raw_data_with_header.first()
